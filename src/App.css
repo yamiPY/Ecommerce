@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(97, 97, 97);
+}
+
+li {
+  list-style: none;
+}
+
+.btns {
+  padding: 10px 20px;
+  margin-right: 6px;
+  background: transparent;
+  border: none;
+  border: 0.6px solid #ccc;
+  border-radius: 5px;
+  color: #323232;
+  cursor: pointer;
+}
+
+/* Layout for sidebar and main content */
+.app-container {
+
+  display: flex;
+  min-height: 100vh; /* Adjust based on your navigation height */
+}
+
+.main-content {
+  
+  flex: 1;
+}

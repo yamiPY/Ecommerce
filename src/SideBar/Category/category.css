@@ -1,0 +1,40 @@
+.category-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0 2rem 1.5rem;
+}
+
+.side-bar-label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  padding-left: 30px; /* مساحة للـ checkbox */
+  margin-bottom: 10px; /* مساحة بين العناصر */
+  font-size: 16px; /* حجم الخط */
+  line-height: 20px;
+}
+.side-bar-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.check-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee; 
+  border-radius: 50%;
+}
+
+
+.side-bar-label:hover input ~ .check-mark {
+    background-color: #CCC;
+
+}
+.side-bar-label input:checked ~ .check-mark {
+  background-color: #5e8fef; /* لون أزرق عند التحديد */
+}

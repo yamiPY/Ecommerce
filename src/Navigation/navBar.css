@@ -1,0 +1,37 @@
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 999;
+  padding: 20px;
+  margin: 0;
+  border-bottom: 1px solid gainsboro;
+  box-shadow: 2px 2px gainsboro;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-input {
+  text-transform: capitalize;
+  padding: 12px 10px;
+  width: 15rem;
+  border: none;
+  outline: none;
+  color: rgb(112, 111, 111);
+  box-shadow: 1px 1px 5px gainsboro;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+.icons a {
+  width: 1.5rem;
+  height: 1.5rem;
+}

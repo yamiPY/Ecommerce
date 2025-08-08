@@ -1,0 +1,75 @@
+.card-container {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  z-index: -2;
+  margin-left: 1rem;
+}
+
+.card {
+  width: 250px;
+  border: 0.001px solid gainsboro;
+  box-shadow: 1px 1px 5px gainsboro;
+  padding: 1rem;
+}
+
+.card img {
+  width: 200px;
+  
+}
+
+.card-details {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reviews {
+  color: rgb(214, 182, 3);
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bag {
+  cursor: pointer;
+}
+
+@media (max-width: 1030px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+  }
+  .card {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card img {
+    width: 170px;
+  }
+}
+
+@media (min-width: 930px) {
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* @media (min-width: 520px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .card {
+    width: 100%;
+  }
+} */
