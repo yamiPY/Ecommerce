@@ -16,6 +16,7 @@ const App = () => {
   function handleClick(value) {
     
     setCompany(value);
+    
   }
   function handleInputChange(e) {
     setQuery(e.target.value);
