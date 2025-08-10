@@ -1,5 +1,6 @@
 import "../../Products/products.css";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
+import StarIcon from "@mui/icons-material/Star"; 
 import LocalMallRoundedIcon from "@mui/icons-material/LocalMallRounded";
 
 const Card = ({
@@ -22,13 +23,19 @@ const Card = ({
       />
       <div className="card-details">
         <h3 className="shoe-name">{title}</h3>
+        <h4>{company}</h4>
         <div className="reviews">
-          <StarOutlinedIcon />
-          <StarOutlinedIcon />
-          <StarOutlinedIcon />
-          <StarOutlinedIcon />
+          {[...Array(5)].map((_, index) =>
+            index < rating ? (
+              <StarIcon key={index} className="filled" />
+            ) : (
+              <StarOutlinedIcon key={index} />
+            )
+          )}
+
           <span className="total-reviews">{reviewsCount}</span>
         </div>
+
         <div className="price">
           <span>
             <del>{prevPrice}</del> {newPrice}

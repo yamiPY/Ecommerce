@@ -40,6 +40,16 @@
 .bag {
   cursor: pointer;
 }
+.reviews svg {
+  color: #ccc; /* لون النجوم الفارغة */
+  font-size: 20px;
+  margin-right: 3px;
+}
+
+.reviews svg.MuiSvgIcon-root.filled {
+  color: #fbc02d; /* لون النجوم المملوءة - أصفر ذهبي */
+}
+
 
 @media (max-width: 1030px) {
   .card-container {
@@ -73,3 +83,4 @@
     width: 100%;
   }
 } */
+
