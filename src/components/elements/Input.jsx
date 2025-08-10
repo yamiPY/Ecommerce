@@ -4,6 +4,7 @@ const Input = ({ onRadioChange, name, value, title, color, checked }) => {
   return (
     <label className="side-bar-label price-label color-label">
       <input
+      className="search-bar"
         type="radio"
         name={name}
         value={value}

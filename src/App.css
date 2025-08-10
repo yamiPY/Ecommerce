@@ -27,12 +27,10 @@ li {
 
 /* Layout for sidebar and main content */
 .app-container {
-
   display: flex;
   min-height: 100vh; /* Adjust based on your navigation height */
 }
 
 .main-content {
-  
   flex: 1;
 }

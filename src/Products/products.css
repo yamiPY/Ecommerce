@@ -13,12 +13,25 @@
   border: 0.001px solid gainsboro;
   box-shadow: 1px 1px 5px gainsboro;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 370px;
+    transition: .34s ease-out;
 }
 
-.card img {
-  width: 200px;
-  
+.card:hover{
+  transform: scale(1.05);
 }
+
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+
+}
+
 
 .card-details {
   margin-top: 0.5rem;
