@@ -2,8 +2,13 @@ import "../../Products/products.css";
 import StarOutlinedIcon from "@mui/icons-material/StarOutlined";
 import StarIcon from "@mui/icons-material/Star"; 
 import LocalMallRoundedIcon from "@mui/icons-material/LocalMallRounded";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 
 const Card = ({
+
   title,
   category,
   company,
@@ -15,8 +20,11 @@ const Card = ({
   img,
   id,
 }) => {
+      useEffect(() => {
+        AOS.init({ duration: 1000 });
+      }, []);
   return (
-    <section className="card">
+    <section data-aos="fade-up" className="card">
       <img
         src={img} // Use the image from data instead of hardcoded URL
         alt={title}
