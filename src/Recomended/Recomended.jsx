@@ -1,18 +1,19 @@
 import "./recomended.css";
+import Buttons from "../components/elements/Buttons";
 
-const Recomended = () => {
+const Recomended = ({ handleClick }) => {
   return (
     <div className="container">
-      <h1>Recomended</h1>
+      <h1>Recommended</h1>
       <div className="filters">
-        <a href="#">All Products</a>
-        <a href="#">Nike</a>
-        <a href="#">Adidas</a>
-        <a href="#">Puma</a>
-        <a href="#">Vans</a>
+        <Buttons handleClick={handleClick} value="all" />
+        <Buttons handleClick={handleClick} value="Nike" />
+        <Buttons handleClick={handleClick} value="Adidas" />
+        <Buttons handleClick={handleClick} value="Puma" />
+        <Buttons handleClick={handleClick} value="Vans" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Recomended
+export default Recomended;

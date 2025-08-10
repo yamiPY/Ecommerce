@@ -11,7 +11,12 @@ const App = () => {
   const [selectedColor, setSelectedColor] = useState("all");
   const [selectedPrice, setSelectedPrice] = useState("all");
   const [query, setQuery] = useState("");
+  const [company, setCompany] = useState("all");
 
+  function handleClick(value) {
+    
+    setCompany(value);
+  }
   function handleInputChange(e) {
     setQuery(e.target.value);
   }
@@ -28,9 +33,22 @@ const App = () => {
     setSelectedPrice(e.target.value.toLowerCase());
   }
 
-  function filteredData(products, category, color, price, query) {
+  function filteredData(
+    products,
+    category,
+    color,
+    price,
+    query,
+    companyFilter
+  ) {
     return products
       .filter((product) => {
+        // تحقق من تطابق الشركة (company)
+        const matchCompany =
+          companyFilter === "all"
+            ? true
+            : product.company.toLowerCase() === companyFilter.toLowerCase();
+
         const matchQuery = product.title
           .toLowerCase()
           .includes(query.toLowerCase());
@@ -55,10 +73,17 @@ const App = () => {
           else if (price === "over $150") matchPrice = priceValue > 150;
         }
 
-        return matchQuery && matchCategory && matchColor && matchPrice;
+        return (
+          matchQuery &&
+          matchCategory &&
+          matchColor &&
+          matchPrice &&
+          matchCompany
+        );
       })
       .map((product) => <Card {...product} key={product.id} />);
   }
+
 
   return (
     <div className="app-container">
@@ -72,14 +97,15 @@ const App = () => {
       />
       <div className="main-content">
         <Navigation query={query} onQueryChange={handleInputChange} />
-        <Recomended />
+        <Recomended handleClick={handleClick} />
         <div className="card-container">
           {filteredData(
             productsList,
             selectedCategory,
             selectedColor,
             selectedPrice,
-            query
+            query,
+            company
           )}
         </div>
       </div>

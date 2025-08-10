@@ -6,16 +6,4 @@
     margin-left: 10rem;
     margin-bottom: 2rem;
     width: 100%;
-
-}
-.filters{
-    display: flex;
-    gap: 1rem;
-}
-
-.filters a {
-    
-    border: 1px solid gainsboro;
-    padding: 0.3rem;
-    border-radius: 5px;
 }
